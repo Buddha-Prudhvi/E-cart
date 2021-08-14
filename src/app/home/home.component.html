@@ -1,0 +1,25 @@
+<app-navigation></app-navigation>
+<div class="container mt-3">
+    <p class="h3 text-primary">Hello Home Page</p>
+    <p class="leed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, quae labore? Ducimus, mollitia? Optio, molestiae! In sed molestias nesciunt dicta dolor praesentium. Excepturi magnam, aut perspiciatis expedita veritatis nostrum unde iure amet nesciunt debitis tenetur ipsum, aperiam quam necessitatibus dolorum!</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="coi-md-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md 4" *ngFor = "let arr of dataarray">
+                        <h1>name: {{arr.name}}</h1>
+                        <h1>price: {{arr.price}}</h1>
+                        <button type ="submit" (click)="to_details()" value = "buy now" class = "btn btn-primary btn-sm" > Buynow</button>
+                    </div>
+                </div>
+            </div>
+            <h4>{{receiveparent}}</h4>
+        </div>
+        <div class="coi-md-4"></div>
+        <div class="coi-md-4"></div>
+    </div>
+</div>
+
+

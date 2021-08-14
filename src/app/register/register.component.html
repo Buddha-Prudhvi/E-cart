@@ -1,0 +1,64 @@
+<!--<form [formGroup] = "registrationForm">
+  <div class="form-group">
+    <label for="Enter Name:">Enter Name:</label>
+    <input type="text" name = "name" formControlName = "name" >
+    <div class="alert alert-danger" *ngIf = "name.invalid && name.touched">
+      <div *ngIf = "name.errors.required">Enter valid name</div>
+      <div *ngIf = "name.errors.minLength">Enter atleast 4 charcters</div>
+    </div>
+
+  </div>
+</form>-->
+
+
+<div class="container">
+    <form [formGroup]="registrationForm">
+    <div class="head">Registration</div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input   formContolName = "name" class="form-control" name="name"  placeholder="Enter Name"><br>
+            <p class="alert alert-danger" *ngIf = "name.touched">name is required</p>
+        </div>
+        <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" formContolName = "email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+         </div>
+        <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" formContolName = "password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+        <label for="gender">Gender :</label>&nbsp;
+        <input type="radio" formControlName="gender" name="gender" id="gender">male
+        <input type="radio" formControlName="gender" name="gender" id="gender">female
+        </div>
+        <div class="form-group" >
+            Address
+            <label for="exampleInputPassword1">Street</label>
+            <input type="text" formContolName = "street" class="form-control"  placeholder="street">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">City</label>
+            <input type="text" formContolName = "city" class="form-control"  placeholder="City">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">state</label>
+            <input type="text" class="form-control" formContolName = "state" placeholder="state">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Zipcode</label>
+            <input type="text" class="form-control"  formContolName = "zipcode" placeholder="zipcode">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Mobile</label>
+            <input type="tel" class="form-control" formContolName = "mobile" placeholder="Mobile">
+        </div>
+    
+        <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" formContolName = "check">
+        <label class="form-check-label" for="exampleCheck1">Agree terms and conditions</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> 
